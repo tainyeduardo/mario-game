@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(img/fundo.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+}
+.titulo h1{
+    font-family: "Mario";
+    src: url("/SuperMario256.ttf"); 
+}
+
+@font-face {
+    font-family: "Mario";
+    src: url("/SuperMario256.ttf") ;
+}
+.over{
+    font-size: 50px;
+    cursor: pointer;
+    color: rgb(165, 244, 244);
+    font-family: "Mario";
+    src: url("/SuperMario256.ttf");
+    font-weight: bold;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+
+
+.game-board{
+    background-color:rgb(165, 244, 244);
+    border-radius: 10px;
+}
+.game-board{
+    width: 80%;
+    height: 500px;
+    border-bottom: 30px solid green;
+    /* border: 1px solid black; */
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 2s infinite linear;
+}
+
+.mario{
+    width: 120px;
+    position: absolute;
+    bottom: 0;
+}
+.cloud {
+    position: absolute;
+    width: 200px;
+    animation: pipe-animation 3s infinite linear;
+    top: 15%;
+}
+.cloud1 {
+    position: absolute;
+    width: 200px;
+    animation: cloud-animation 4s infinite linear;
+}
+.cloud2 {
+    position: absolute;
+    width: 200px;
+    animation: cloud-animation 5s infinite linear;
+    top: 20%;
+}
+
+.jump{
+    animation: mario-jump 700ms ease-out;
+}
+.mario-dead{
+    width: 70px;
+    position: absolute;
+    bottom: 0;
+}
+@keyframes dead-animation{
+
+}
+
+
+
+
+
+@keyframes pipe-animation{
+    from {
+        right: -200px;
+    }
+    to {
+        right: 100%;
+    }
+}
+@keyframes cloud-animation{
+    from {
+        right: -200px;
+    }
+    to {
+        right: 100%;
+    }
+}
+@keyframes mario-jump{
+    0% {
+        bottom: 0;
+    }
+    40%{
+        bottom: 180px;
+    }
+    55%{
+        bottom: 180px;
+    }
+    60%{
+        bottom: 180px;
+    }
+    70%{
+        bottom: 100px;
+}
+    80%{
+        bottom: 50px;
+}
+    90%{
+        bottom: 20px;
+}
+    100%{
+        bottom: 0%;
+    }
+}
